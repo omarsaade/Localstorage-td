@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="localstorage.css">
+</head>
+
+<body>
+    <h4 class="text-center heading">Get Shit Done</h4>
+
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <div class="columns medium-8">
+                <input id="todo-input" type="text" />
+            </div>
+            <div class="columns medium-4">
+                <button onclick="addItem()" class="button expanded">Submit</button>
+            </div>
+            <p id="sam"></p>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="columns medium-8 medium-offset-2">
+            <ul id="list-items">
+            </ul>
+        </div>
+    </div>
+    <script src="localstorage.js"></script>
+</body>
+
+</html>
