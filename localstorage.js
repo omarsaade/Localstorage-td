@@ -58,6 +58,8 @@
 // JSON.parse is used to parse the stringified items from localStorage
 // if localStorage is empty, make the items variable an empty array
 var items = JSON.parse(localStorage.getItem('todo-list')) || [];
+console.log(items);
+// var items = [];
 
 // function to add item to the items array
 function addItem() {
@@ -73,11 +75,17 @@ function addItem() {
     // If input is valid, add item to items array
     items.push({
         value: item,
+        //push hye shio 5as bel array
+
         time: (new Date()).toLocaleDateString("en-US")
     })
+    //items = [{value:ali},{value:sami}]
+
 
     // then convert to a string with JSON.stringify and save to localStorage
     localStorage.setItem('todo-list', JSON.stringify(items));
+    //object to json
+    console.log(items);
 
     // call function to list all items
     listItems();
@@ -86,11 +94,13 @@ function addItem() {
     inputBox.value = "";
 }
 
+
+
 // function to remove item from array with Array.splice()
 // removes item, then saves new items array to localStorage
 function deleteItem(index) {
     items.splice(index, 1);
-    localStorage.setItem('todo-list', JSON.stringify(items))
+    localStorage.setItem('todo-list', JSON.stringify(items));
     listItems();
 }
 
@@ -99,6 +109,7 @@ function markAsDone(index) {
     localStorage.setItem('todo-list', JSON.stringify(items));
     listItems();
 }
+
 
 
 // function that generates list of items and populates the html
@@ -193,6 +204,10 @@ function listItems() {
 //     listItems();
 // })();
 
+// // function to run when page loads
+// (function () {
+//     listItems();
+// })();
 
 
 
